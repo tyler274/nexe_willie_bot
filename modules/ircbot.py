@@ -26,7 +26,7 @@ def ping(bot, trigger):
 		formatted_message = message.split("] ", 1)
 		if formatted_message[1]:
 			print formatted_message[1] + "\nSent at: "  + datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S") + " #####\n##### Replies are NOT monitored #####\n"
-			#OpenfireManager.send_broadcast_threaded('corp_nex_exercitus', str(trigger.event), )
+			#OpenfireManager.send_broadcast_threaded('AllianceMember', str(trigger.event), )
 			# bot.say('you sent a broadcast, ' + trigger.nick)
 	
 
