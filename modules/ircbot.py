@@ -20,13 +20,12 @@ import sys
 @module.rule('.')
 def ping(bot, trigger):
 	if trigger.nick == "FleetBot":
-		# if unicode(trigger.raw).find(
-		print trigger.raw
 		message = unicode(trigger.raw)
-		formatted_message = message.split("] ", 1)
-		if len(formatted_message) >= 2:
-			print formatted_message[1] + "\nSent at: "  + datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S") + " #####\n##### Replies are NOT monitored #####\n"
-			#OpenfireManager.send_broadcast_threaded('AllianceMember', str(trigger.event), )
+		unformatted_message = message.split("] ", 1)
+		if len(unformatted_message) >= 2:
+			formatted_message = unformatted_message[1] + "\nSent at: "  + datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S") + " #####\n##### Replies are NOT monitored #####\n"
+			print formatted_message
+			#OpenfireManager.send_broadcast_threaded('AllianceMember', formatted_message, )
 			# bot.say('you sent a broadcast, ' + trigger.nick)
 	
 
