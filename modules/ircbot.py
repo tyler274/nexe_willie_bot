@@ -3,6 +3,9 @@ import datetime
 import random
 
 import os
+import sys
+
+# sys.path.append(‘/path/to/allianceauth’)
 
 #os.environ.setdefault("DJANGO_SETTINGS_MODULE", "alliance_auth.settings")
 
