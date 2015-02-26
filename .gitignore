@@ -59,3 +59,4 @@ target/
 
 #willie stuff
 *.db
+*.cfg
