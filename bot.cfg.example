@@ -1,0 +1,26 @@
+[core]
+nick = <nickname>
+host = <host>
+use_ssl = True
+port = 6667
+owner = <name of owner seperated by commas>
+user = <username>
+server_password = <set both passwords the same>
+nickserv_password = <set both passwords the same>
+channels = FleetBot
+name = botbot
+prefix = \.
+admins = <names of admins seperated by commas>
+verify_ssl = False
+timeout = 120
+log_raw = False
+logdir = logs/
+extra = modules/
+
+[clock]
+tz = UTC
+time_format = %F - %T%Z
+
+[admin]
+hold_ground = True
+auto_accept_invite = True
