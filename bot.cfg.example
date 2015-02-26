@@ -16,6 +16,7 @@ timeout = 120
 log_raw = False
 logdir = logs/
 extra = modules/
+exclude = url
 
 [clock]
 tz = UTC
