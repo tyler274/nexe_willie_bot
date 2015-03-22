@@ -37,8 +37,11 @@ def ping(bot, trigger):
 			
 @module.commands('history')
 def history(bot, trigger):
-	for m in history:
-        	bot.msg(trigger.user, m)
+	if len(history) > 0:
+		for m in history:
+        		bot.msg(trigger.user, m)
+        else:
+        	bot.msg(trigger.user, "No pings recorded")
 
 @module.commands('9/13')
 def nine_thirteen(bot, trigger):
