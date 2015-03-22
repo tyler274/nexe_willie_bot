@@ -15,7 +15,7 @@ import sys
 # @module.rule('hello!?')
 # def hi(bot, trigger):
 #    bot.say('Hi ' + trigger.nick + ", I'm a bot")
-
+history = []
 
 @module.rule('.')
 def ping(bot, trigger):
@@ -27,7 +27,18 @@ def ping(bot, trigger):
 			print formatted_message
 			#OpenfireManager.send_broadcast_threaded('AllianceMember', formatted_message, )
 			# bot.say('you sent a broadcast, ' + trigger.nick)
+			# for x in history[-5:-0]
+			if len(history) < 5:
+				history.append(formatted_message)
+			else:
+				history.pop(0)
+				history.append(formatted_message)
 	
+			
+@module.commands('history')
+def history(bot, trigger):
+	for m in history:
+        	bot.msg(trigger.user, m)
 
 @module.commands('9/13')
 def nine_thirteen(bot, trigger):
